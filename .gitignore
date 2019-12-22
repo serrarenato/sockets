@@ -1,0 +1,37 @@
+*.log
+
+.idea/
+node_modules
+package-lock.json
+
+# Eclipse
+.classpath
+.project
+.settings/
+
+# Maven
+pom.xml.versionsBackup
+target/
+dist/
+bin/
+
+# JRebel
+**/rebel.xml
+
+.sonarlint/**
+.metadata/**
+.recommenders/**
+**/.gradle/
+
+logstash.json
+
+transaction-logs/
+*.iml
+*.ipr
+*.iws
+/.metadata/
+/.recommenders/
+**/dependencia*.txt
+**/logstash.json.*.gz
+
+owasp-database/*
