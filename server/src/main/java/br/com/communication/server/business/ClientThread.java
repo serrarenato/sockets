@@ -1,6 +1,7 @@
 package br.com.communication.server.business;
 
 import java.io.IOException;
+import java.io.PrintStream;
 import java.net.Socket;
 import java.util.Scanner;
 
@@ -18,10 +19,13 @@ public class ClientThread implements Runnable {
 		try {
 			
 			inputClient = new Scanner(socket.getInputStream());
+			PrintStream outputClient = new PrintStream(socket.getOutputStream());
+			
 			while (inputClient.hasNextLine()) {
 	            String comando = inputClient.nextLine();
 	            System.out.println("Cliente: " +socket.getPort());
 	            System.out.println(comando);
+	            outputClient.println("Mensagem recebida: " + comando);
 	        }
 	        inputClient.close();
 		} catch (IOException e) {

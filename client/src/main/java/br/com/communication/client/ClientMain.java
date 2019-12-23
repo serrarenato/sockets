@@ -16,7 +16,6 @@ public class ClientMain
         TalkServer talkServer = new TalkServer(socket);
         
         talkServer.talk();
-        socket.close();
-        System.out.println("Conexão Fechada");
+
     }
 }
